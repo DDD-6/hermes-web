@@ -1,6 +1,7 @@
 import { css } from '@emotion/react';
 
 export const classStyles = css`
+  /** Layout > HStack */
   .HStack-container {
     height: 100%;
   }

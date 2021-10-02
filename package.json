@@ -15,6 +15,7 @@
     "dev": "yarn workspace @hermes/app run dev",
     "build": "yarn workspace @hermes/app run build",
     "build:design-system": "yarn workspace @hermes/design-system run build",
+    "storybook": "yarn workspace @hermes/design-system run storybook",
     "packages:build": "yarn workspaces foreach -ptv --include 'packages/*' run build",
     "packages:lint": "yarn workspaces foreach -ptv --include 'packages/*' run lint",
     "packages:typecheck": "yarn workspaces foreach -ptv --include 'packages/*' run typecheck",
