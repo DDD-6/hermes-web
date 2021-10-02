@@ -1,3 +1,30 @@
 {
-  "extends": "./tsconfig.base"
+  "compilerOptions": {
+    "baseUrl": "packages",
+    "target": "es5",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "module": "esnext",
+    "moduleResolution": "node",
+    "declaration": true,
+    "sourceMap": true,
+    "noUnusedLocals": true,
+    "allowJs": true,
+    "allowSyntheticDefaultImports": true,
+    "isolatedModules": true,
+    "resolveJsonModule": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "noEmit": true,
+    "noImplicitAny": false,
+    "preserveSymlinks": false,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "paths": {
+      "@hermes/app/*": ["app/src/*"],
+      "@hermes/apis/*": ["apis/src/*"],
+      "@hermes/design-system/*": ["design-system/src/*"],
+      "@hermes/types": ["types/src/*"],
+      "@hermes/utils": ["utils/src/*"]
+    },
+  }
 }

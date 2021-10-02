@@ -1,8 +1,20 @@
 {
+  "name": "hermes-web",
+  "version": "1.0.0",
   "private": true,
+  "homepage": "https://github.com/DDD-6/hermes-web",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/DDD-6/hermes-web.git"
+  },
+  "contributors": [
+    "변현홍 <tombyun@naver.com>",
+    "이단비 <blocktobody@gmail.com>"
+  ],
   "scripts": {
-    "dev": "yarn workspace @hermes-web/app run dev",
-    "build": "yarn workspace @hermes-web/app run build",
+    "dev": "yarn workspace @hermes/app run dev",
+    "build": "yarn workspace @hermes/app run build",
+    "build:design-system": "yarn workspace @hermes/design-system run build",
     "packages:build": "yarn workspaces foreach -ptv --include 'packages/*' run build",
     "packages:lint": "yarn workspaces foreach -ptv --include 'packages/*' run lint",
     "packages:typecheck": "yarn workspaces foreach -ptv --include 'packages/*' run typecheck",
