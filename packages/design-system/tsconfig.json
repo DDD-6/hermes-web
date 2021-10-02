@@ -1,8 +1,10 @@
 {
   "extends": "../../tsconfig.json",
   "compilerOptions": {
+    "types": ["@emotion/react"],
     "outDir": "dist/",
     "jsx": "react-jsx",
+    "jsxImportSource": "@emotion/react",
     "baseUrl": ".",
     "paths": {
       "design-system/*": ["./src/*"]

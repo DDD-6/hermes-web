@@ -2,7 +2,6 @@ import { css } from '@emotion/react';
 
 export const global = css`
   :root {
-    line-height: 1.5;
     text-size-adjust: 100%;
   }
 
@@ -18,6 +17,9 @@ export const global = css`
   *::before,
   *::after {
     box-sizing: border-box;
+    font-family: SF Pro KR, SF Pro Display, SF Pro Icons, -apple-system,
+      BlinkMacSystemFont, /*Averta, */ Noto Sans KR, Segoe UI, Roboto,
+      Helvetica Neue, Helvetica, Arial, sans-serif;
   }
 
   hr {
