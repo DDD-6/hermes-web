@@ -1,4 +1,3 @@
-/** @jsxImportSource @emotion/react */
 import { Global } from '@emotion/react';
 
 import * as styles from './styles';

@@ -17,9 +17,9 @@ module.exports = {
       ...config.resolve,
       alias: {
         ...config.resolve.alias,
-        "@emotion/styled": resolvePath("@emotion/styled"),
-        "@emotion/styled": resolvePath("@emotion/styled"),
-        "emotion-theming": resolvePath("@emotion/react"),
+          "@emotion/core": resolvePath("@emotion/react"),
+          "@emotion/styled": resolvePath("@emotion/styled"),
+          "emotion-theming": resolvePath("@emotion/react"),
       }
     }
   })
