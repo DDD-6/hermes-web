@@ -1,0 +1,31 @@
+{
+  "compilerOptions": {
+    "types": ["node", "@emotion/react"],
+    "baseUrl": ".",
+    "module": "commonjs",
+    "target": "es6",
+    "jsx": "react-jsx",
+    "jsxImportSource": "@emotion/react",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "outDir": "dist/",
+    "moduleResolution": "node",
+    "declaration": true,
+    "sourceMap": true,
+    "noUnusedLocals": false,
+    "allowJs": true,
+    "allowSyntheticDefaultImports": true,
+    "isolatedModules": true,
+    "resolveJsonModule": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "noImplicitAny": false,
+    "preserveSymlinks": false,
+    "esModuleInterop": true,
+  },
+  "include": ["src/**/*.ts", "src/**/*.tsx"],
+  "exclude": [
+    "node_modules",
+    "**/dist", 
+    "**/*.stories.tsx",
+  ]
+}

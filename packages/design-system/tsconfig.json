@@ -1,9 +1,21 @@
 {
-  "extends": "../../tsconfig.base",
+  "extends": "../../tsconfig.json",
   "compilerOptions": {
-    "outDir": "lib",
-    "jsx": "react",
-    "baseUrl": ".."
+    "types": ["@emotion/react"],
+    "outDir": "dist/",
+    "jsx": "react-jsx",
+    "jsxImportSource": "@emotion/react",
+    "baseUrl": ".",
+    "paths": {
+      "design-system/*": ["./src/*"]
+    },
   },
-  "include": ["./src/**/*"]
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "./*.config.js",
+  ],
+  "exclude": [
+    "node_modules"
+  ]
 }
