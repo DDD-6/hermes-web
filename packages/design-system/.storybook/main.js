@@ -11,7 +11,7 @@ module.exports = {
   typescript: {
     check: true,
   },
-  "webpackFinal": async (config) => ({
+  webpackFinal: async (config) => ({
     ...config,
     resolve: {
       ...config.resolve,
