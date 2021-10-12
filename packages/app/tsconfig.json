@@ -5,7 +5,9 @@
     "jsx": "preserve",
     "baseUrl": ".",
     "paths": {
-      "app/*": ["./src/*"]
+      "components/*": ["./src/components/*"],
+      "hooks/*": ["./src/hooks/*"],
+      "pages/*": ["./src/pages/*"],
     },
   },
   "include": [
