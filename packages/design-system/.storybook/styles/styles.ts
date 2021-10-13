@@ -1,6 +1,20 @@
 import { css } from '@emotion/react';
 
 export const classStyles = css`
+  /** Base > Text */
+  .Text-basic {
+    margin-bottom: 20px;
+  }
+
+  .Text-container {
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  .Text-title {
+    width: 150px;
+  }
+
   /** Layout > GridContainer */
   .GridContainer-container {
     width: 220px;

@@ -7,7 +7,7 @@ export default function VStack({
   ...restProps
 }: StackContainerProps) {
   return (
-    <StackContainer direction="column" {...restProps}>
+    <StackContainer flexDirection="column" {...restProps}>
       {children}
     </StackContainer>
   );

@@ -65,28 +65,32 @@ export const VStackVariations = (args: StackContainerProps) => {
       <h2 className="StackContainer-title">justify content</h2>
       <StackContainer>
         <div className="StackContainer-column">
-          <Base {...args} direction="column" justifyContent="flex-start" />
+          <Base {...args} flexDirection="column" justifyContent="flex-start" />
         </div>
         <div className="StackContainer-column">
-          <Base {...args} direction="column" justifyContent="center" />
+          <Base {...args} flexDirection="column" justifyContent="center" />
         </div>
         <div className="StackContainer-column">
-          <Base {...args} direction="column" justifyContent="flex-end" />
+          <Base {...args} flexDirection="column" justifyContent="flex-end" />
         </div>
         <div className="StackContainer-column">
-          <Base {...args} direction="column" justifyContent="space-between" />
+          <Base
+            {...args}
+            flexDirection="column"
+            justifyContent="space-between"
+          />
         </div>
       </StackContainer>
       <h2 className="StackContainer-title">align items</h2>
       <StackContainer>
         <div className="StackContainer-column">
-          <Base {...args} direction="column" alignItems="flex-start" />
+          <Base {...args} flexDirection="column" alignItems="flex-start" />
         </div>
         <div className="StackContainer-column">
-          <Base {...args} direction="column" alignItems="center" />
+          <Base {...args} flexDirection="column" alignItems="center" />
         </div>
         <div className="StackContainer-column">
-          <Base {...args} direction="column" alignItems="flex-end" />
+          <Base {...args} flexDirection="column" alignItems="flex-end" />
         </div>
       </StackContainer>
     </div>

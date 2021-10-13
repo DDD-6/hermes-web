@@ -2,7 +2,15 @@
 import type { NextPage } from 'next';
 import { css } from '@emotion/react';
 
-import { HStack, VStack, GridContainer } from '@hermes/design-system';
+import {
+  HStack,
+  VStack,
+  GridContainer,
+  Title,
+  Paragraph,
+  Caption,
+  Text,
+} from '@hermes/design-system';
 
 export const stackStyle = css`
   & > * {
@@ -32,16 +40,18 @@ export const gridStyle = css`
 const Home: NextPage = () => {
   return (
     <div>
-      <h1>에르메스 - 공유 블로그</h1>
+      <Title type="1">에르메스 - 공유 블로그</Title>
       <HStack css={stackStyle}>
-        <div>안녕</div>
-        <div>하세요</div>
-        <div>잘부탁드려요</div>
+        <Paragraph type="1">39, 12:34, A:가, FE—X SFO → STO</Paragraph>
+        <Paragraph type="2">타이포그래피</Paragraph>
+        <Paragraph type="3">hamburgefonstiv</Paragraph>
       </HStack>
       <VStack css={stackStyle}>
-        <div>안녕</div>
-        <div>하세요</div>
-        <div>잘부탁드려요</div>
+        <Caption type="1">2021년 6월 28일 오후 12:00</Caption>
+        <Caption type="2">
+          Lorèm Ipsúm Dólór ßít Amet, Cònßeçtetür ADIPISCING Elìt.
+        </Caption>
+        <Text>WP0ACO4XSI16O9</Text>
       </VStack>
       <GridContainer
         css={gridStyle}

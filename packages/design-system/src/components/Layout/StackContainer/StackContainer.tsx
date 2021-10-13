@@ -8,19 +8,14 @@ import classNames from 'classnames';
 export interface StackContainerProps
   extends Omit<HTMLAttributes<HTMLDivElement>, 'css'>,
     FlexboxProps {
-  direction?: 'row' | 'column';
   className?: string;
   children: ReactNode;
 }
 
-export const containerStyle = ({
-  direction,
-}: {
-  direction: 'row' | 'column';
-}) => css`
+export const containerStyle = css`
   width: 100%;
   display: flex;
-  flex-direction: ${direction};
+  flex-direction: row;
 `;
 
 const Container = styled.div`
@@ -29,12 +24,11 @@ const Container = styled.div`
 `;
 
 export default function StackContainer(props: StackContainerProps) {
-  const { direction = 'row', className = '', children, ...restProps } = props;
+  const { className = '', children, ...restProps } = props;
 
   return (
     <Container
       className={classNames('hermes-stack-container', className)}
-      direction={direction}
       {...restProps}
     >
       {children}
