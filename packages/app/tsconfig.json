@@ -4,11 +4,6 @@
     "outDir": "lib",
     "jsx": "preserve",
     "baseUrl": ".",
-    "paths": {
-      "components/*": ["./src/components/*"],
-      "hooks/*": ["./src/hooks/*"],
-      "pages/*": ["./src/pages/*"],
-    },
   },
   "include": [
     "src/**/*.ts",

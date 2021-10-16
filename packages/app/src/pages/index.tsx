@@ -10,6 +10,8 @@ import {
   Paragraph,
   Caption,
   Text,
+  Icon,
+  colors,
 } from '@hermes/design-system';
 
 export const stackStyle = css`
@@ -41,6 +43,8 @@ const Home: NextPage = () => {
   return (
     <div>
       <Title type="1">에르메스 - 공유 블로그</Title>
+      <Icon name="uil-react" size={20} color={colors.success} />
+      <Icon name="uil-strange-icon" size={20} color={colors.error} />
       <HStack css={stackStyle}>
         <Paragraph type="1">39, 12:34, A:가, FE—X SFO → STO</Paragraph>
         <Paragraph type="2">타이포그래피</Paragraph>

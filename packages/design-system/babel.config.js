@@ -6,5 +6,18 @@ module.exports = {
       { runtime: 'automatic', importSource: '@emotion/react' },
     ],
   ],
-  plugins: ['@emotion', '@babel/plugin-transform-runtime'],
+  plugins: [
+    '@emotion',
+    '@babel/plugin-transform-runtime',
+    [
+      'module-resolver',
+      {
+        root: ['.'],
+        alias: {
+          components: './src/components',
+          styles: './src/styles',
+        },
+      },
+    ],
+  ],
 };

@@ -1,8 +1,7 @@
 /** @jsxImportSource @emotion/react */
-import { ReactNode } from 'react';
 import { css } from '@emotion/react';
 
-import Text from './Text';
+import Text, { TextProps } from './Text';
 import { titleElementMap, titleStyleMap } from './fontMaps';
 
 export type TitleType =
@@ -17,14 +16,12 @@ export type TitleType =
   | '9'
   | '10';
 
-export interface TitleProps {
+export interface TitleProps extends Omit<TextProps, 'as'> {
   type: TitleType;
-  className?: string;
-  children: ReactNode;
 }
 
 export default function Title(props: TitleProps) {
-  const { type, className = '', children } = props;
+  const { type, className = '', children, ...restProps } = props;
 
   const as = titleElementMap[type];
   const titleStyle = css`
@@ -33,7 +30,7 @@ export default function Title(props: TitleProps) {
   `;
 
   return (
-    <Text className={className} css={titleStyle} as={as}>
+    <Text className={className} css={titleStyle} as={as} {...restProps}>
       {children}
     </Text>
   );

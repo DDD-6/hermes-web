@@ -1,38 +1,40 @@
 import { css } from '@emotion/react';
 
+import { colors } from './colors';
+
 export const variables = css`
   :root {
     /* Hermes Color System */
     // Gray Scale
-    --white: #ffffff;
-    --black: #000000;
-    --grey-1: #f7f7f7;
-    --grey-2: #efefef;
-    --grey-3: #e1e1e1;
-    --grey-4: #d1d1d1;
-    --grey-5: #bababa;
-    --grey-6: #a5a5a5;
-    --grey-7: #989898;
-    --grey-8: #8a8a8a;
-    --grey-9: #6b6b6b;
-    --grey-10: #5b5b5b;
-    --grey-11: #4a4a4a;
-    --grey-12: #383838;
-    --grey-13: #1d1d1d;
+    --white: ${colors.white};
+    --grey-1: ${colors.grey1};
+    --grey-2: ${colors.grey2};
+    --grey-3: ${colors.grey3};
+    --grey-4: ${colors.grey4};
+    --grey-5: ${colors.grey5};
+    --grey-6: ${colors.grey6};
+    --grey-7: ${colors.grey7};
+    --grey-8: ${colors.grey8};
+    --grey-9: ${colors.grey9};
+    --grey-10: ${colors.grey10};
+    --grey-11: ${colors.grey11};
+    --grey-12: ${colors.grey12};
+    --grey-13: ${colors.grey13};
+    --black: ${colors.black};
     // Primary Scale
-    --primary: #bfd5e5;
-    --primary-d1: #7ca8c9;
-    --primary-d2: #4883ae;
-    --primary-l1: #f0f8fe;
-    --primary-l2: #dbe9f4;
+    --primary: ${colors.primary};
+    --primary-d1: ${colors.primaryD1};
+    --primary-d2: ${colors.primaryD2};
+    --primary-l1: ${colors.primaryL1};
+    --primary-l2: ${colors.primaryL2};
     // Secondary Scale
-    --secondary: #ea5b68;
-    --secondary-d1: #d73745;
-    --secondary-d2: #b71624;
-    --secondary-l1: #fff6f7;
-    --secondary-l2: #ffebed;
+    --secondary: ${colors.secondary};
+    --secondary-d1: ${colors.secondaryD1};
+    --secondary-d2: ${colors.secondaryD2};
+    --secondary-l1: ${colors.secondaryL1};
+    --secondary-l2: ${colors.secondaryL2};
     // Alert
-    --error: #b83634;
-    --success: #478b6f;
+    --error: ${colors.error};
+    --success: ${colors.success};
   }
 `;
