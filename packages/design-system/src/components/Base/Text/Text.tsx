@@ -14,7 +14,7 @@ export default function Text(props: TextProps) {
   const { as = 'p', className = '', children } = props;
 
   const Component = styled(as as any)`
-    letter-spacing: -0.2px;
+    letter-spacing: -0.6px;
   `;
 
   return (

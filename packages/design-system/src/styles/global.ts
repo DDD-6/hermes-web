@@ -1,14 +1,15 @@
 import { css } from '@emotion/react';
 
+import { variables } from './variables';
+
 export const global = css`
   @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard-dynamic-subset.css');
 
-  :root {
-    text-size-adjust: 100%;
-  }
+  ${variables}
 
   html {
     scroll-behavior: smooth;
+    text-size-adjust: 100%;
   }
 
   body {
