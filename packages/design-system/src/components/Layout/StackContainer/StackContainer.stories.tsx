@@ -14,6 +14,7 @@ const StackContainerBase: Story<StackContainerProps> = (args) => {
       className="StackContainer-container"
       alignItems="center"
       justifyContent="center"
+      gap={10}
       {...args}
     >
       {['A', 'B', 'C', 'D', 'E'].map((item) => (

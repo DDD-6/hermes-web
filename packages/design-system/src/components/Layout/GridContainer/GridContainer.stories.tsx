@@ -11,11 +11,7 @@ export default {
 const GridContainerBase: Story<GridContainerProps> = (args) => {
   return (
     <div className="GridContainer-container">
-      <GridContainer
-        gridTemplateColumns="repeat(3, 1fr)"
-        gridGap={[10]}
-        {...args}
-      >
+      <GridContainer gridTemplateColumns="repeat(3, 1fr)" gap={10} {...args}>
         {['A', 'B', 'C', 'D', 'E'].map((item) => (
           <div key={item} className="GridContainer-innerBox">
             {item}
