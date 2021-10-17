@@ -7,7 +7,7 @@ import classNames from 'classnames';
 import {
   ContainerGapType,
   getContainerGapStyle,
-} from 'utils/getContainerGapStyle';
+} from '../../../utils/getContainerGapStyle';
 
 export interface StackContainerProps
   extends Omit<HTMLAttributes<HTMLDivElement>, 'css'>,

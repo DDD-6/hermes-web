@@ -1,26 +1,20 @@
-import { isString } from './typeCheckUtils';
-
-export type GapValueType = string | number;
+import { getSizeValueByType, SizeValueType } from './getSizeValueByType';
 
 export type ContainerGapType =
-  | GapValueType
-  | [GapValueType]
-  | [GapValueType, GapValueType];
-
-function getValueByType(value: GapValueType) {
-  return isString(value) ? value : `${value}px`;
-}
+  | SizeValueType
+  | [SizeValueType]
+  | [SizeValueType, SizeValueType];
 
 export function getContainerGapStyle(gap: ContainerGapType) {
   if (!Array.isArray(gap)) {
-    return getValueByType(gap);
+    return getSizeValueByType(gap);
   }
 
   const [row, column] = gap;
 
   if (!column) {
-    return getValueByType(row);
+    return getSizeValueByType(row);
   }
 
-  return `${getValueByType(row)} ${getValueByType(column)}`;
+  return `${getSizeValueByType(row)} ${getSizeValueByType(column)}`;
 }

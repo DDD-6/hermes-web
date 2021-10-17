@@ -12,7 +12,11 @@ import {
   Text,
   Icon,
   colors,
+  Image,
 } from '@hermes/design-system';
+
+const dummyImage =
+  'https://www.eatlovesavor.com/wp-content/uploads/2016/05/orange-hermes-box.jpg';
 
 export const stackStyle = css`
   & > * {
@@ -45,12 +49,12 @@ const Home: NextPage = () => {
       <Title type="1">에르메스 - 공유 블로그</Title>
       <Icon name="uil-react" size={20} color={colors.success} />
       <Icon name="uil-strange-icon" size={20} color={colors.error} />
-      <HStack css={stackStyle}>
+      <HStack css={stackStyle} gap={10}>
         <Paragraph type="1">39, 12:34, A:가, FE—X SFO → STO</Paragraph>
         <Paragraph type="2">타이포그래피</Paragraph>
         <Paragraph type="3">hamburgefonstiv</Paragraph>
       </HStack>
-      <VStack css={stackStyle}>
+      <VStack css={stackStyle} gap={[20, 20]}>
         <Caption type="1">2021년 6월 28일 오후 12:00</Caption>
         <Caption type="2">
           Lorèm Ipsúm Dólór ßít Amet, Cònßeçtetür ADIPISCING Elìt.
@@ -59,7 +63,7 @@ const Home: NextPage = () => {
       </VStack>
       <GridContainer
         css={gridStyle}
-        gridGap={10}
+        gap={10}
         gridTemplateColumns="repeat(3, 1fr)"
       >
         <div>a</div>
@@ -67,6 +71,7 @@ const Home: NextPage = () => {
         <div>c</div>
         <div>d</div>
       </GridContainer>
+      <Image src={dummyImage} width={700} height={343} />
     </div>
   );
 };

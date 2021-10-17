@@ -3,7 +3,7 @@ import { SVGAttributes } from 'react';
 import classNames from 'classnames';
 import * as Unicons from '@iconscout/react-unicons';
 
-import { colors } from 'styles/colors';
+import { colors } from '../../../styles';
 
 function clearDashAndUpper(text: string) {
   return text.replace(/-/, '').toUpperCase();
@@ -13,7 +13,7 @@ function toPascalCase(text: string) {
   return text.replace(/(^\w|-\w)/g, clearDashAndUpper);
 }
 
-export interface IconProps extends SVGAttributes<SVGSVGElement> {
+export interface IconProps extends Omit<SVGAttributes<SVGSVGElement>, 'css'> {
   name: string;
   size?: number;
   color?: string;
