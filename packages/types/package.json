@@ -1,0 +1,8 @@
+{
+  "name": "@hermes/types",
+  "version": "0.1.0",
+  "main": "./src/index.ts",
+  "scripts": {
+    "lint": "eslint . --fix --ext .ts,.tsx"
+  }
+}

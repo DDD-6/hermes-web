@@ -1,16 +1,14 @@
 {
-  "extends": "../../tsconfig.base",
+  "extends": "../../tsconfig.json",
   "compilerOptions": {
     "outDir": "lib",
     "jsx": "preserve",
-    "baseUrl": "..",
-    "lib": [
-      "dom",
-      "es2018"
-    ]
+    "baseUrl": ".",
   },
   "include": [
-    "./src/**/*"
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "./*.config.js",
   ],
   "exclude": [
     "node_modules"

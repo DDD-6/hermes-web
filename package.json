@@ -1,19 +1,51 @@
 {
+  "name": "hermes-web",
+  "version": "1.0.0",
   "private": true,
+  "homepage": "https://github.com/DDD-6/hermes-web",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/DDD-6/hermes-web.git"
+  },
+  "contributors": [
+    "변현홍 <tombyun@naver.com>",
+    "이단비 <blocktobody@gmail.com>"
+  ],
   "scripts": {
-    "dev": "yarn workspace @hermes-web/app run dev",
-    "build": "yarn workspace @hermes-web/app run build",
-    "packages:build": "yarn workspaces foreach -ptv --include 'packages/*' run build",
-    "packages:lint": "yarn workspaces foreach -ptv --include 'packages/*' run lint",
-    "packages:typecheck": "yarn workspaces foreach -ptv --include 'packages/*' run typecheck",
-    "packages:clean": "yarn workspaces foreach -ptv --include 'packages/*' run clean",
-    "typecheck": "yarn workspaces foreach -ptv run typecheck",
-    "lint": "yarn workspaces foreach -ptv run lint",
-    "clean": "yarn workspaces foreach -ptv run clean"
+    "dev": "yarn workspace @hermes/app dev",
+    "storybook": "yarn workspace @hermes/design-system storybook",
+    "build": "yarn workspace @hermes/app build && yarn workspace @hermes/design-system build",
+    "build:app": "yarn workspace @hermes/app build",
+    "build:design-system": "yarn workspace @hermes/design-system build",
+    "lint": "yarn workspace @hermes/app lint && yarn workspace @hermes/design-system lint && yarn workspace @hermes/apis lint && yarn workspace @hermes/types lint && yarn workspace @hermes/utils lint",
+    "clean": "find . -name 'node_modules' -type d -prune -exec rm -rf '{}' +"
   },
   "workspaces": {
     "packages": [
       "packages/*"
     ]
+  },
+  "dependencies": {
+    "@types/react": "^17.0.20",
+    "@types/react-dom": "^17.0.9",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "typescript": "^4.4.3"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^4.31.1",
+    "@typescript-eslint/parser": "^4.31.1",
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-config-next": "^11.1.2",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-config-react-app": "^6.0.0",
+    "eslint-plugin-import": "^2.24.2",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-next": "^0.0.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-react": "^7.21.5",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "prettier": "^2.4.0"
   }
 }
