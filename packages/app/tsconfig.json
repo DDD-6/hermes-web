@@ -4,9 +4,6 @@
     "outDir": "lib",
     "jsx": "preserve",
     "baseUrl": ".",
-    "paths": {
-      "app/*": ["./src/*"]
-    },
   },
   "include": [
     "src/**/*.ts",

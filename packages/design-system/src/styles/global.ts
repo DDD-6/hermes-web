@@ -1,12 +1,15 @@
 import { css } from '@emotion/react';
 
+import { variables } from './variables';
+
 export const global = css`
-  :root {
-    text-size-adjust: 100%;
-  }
+  @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard-dynamic-subset.css');
+
+  ${variables}
 
   html {
     scroll-behavior: smooth;
+    text-size-adjust: 100%;
   }
 
   body {
@@ -17,9 +20,9 @@ export const global = css`
   *::before,
   *::after {
     box-sizing: border-box;
-    font-family: SF Pro KR, SF Pro Display, SF Pro Icons, -apple-system,
-      BlinkMacSystemFont, /*Averta, */ Noto Sans KR, Segoe UI, Roboto,
-      Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui,
+      Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo',
+      'Noto Sans KR', 'Malgun Gothic', sans-serif;
   }
 
   hr {

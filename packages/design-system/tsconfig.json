@@ -6,9 +6,6 @@
     "jsx": "react-jsx",
     "jsxImportSource": "@emotion/react",
     "baseUrl": ".",
-    "paths": {
-      "design-system/*": ["./src/*"]
-    },
   },
   "include": [
     "src/**/*.ts",
