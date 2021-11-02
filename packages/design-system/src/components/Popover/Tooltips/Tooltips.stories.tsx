@@ -1,6 +1,5 @@
-import React from 'react';
 import { VStack, HStack } from '../../../components/Layout/StackContainer';
-import Tooltips, { TooltipsProps } from './Tooltips';
+import Tooltips from './Tooltips';
 import { colors } from '../../../styles';
 
 export default {

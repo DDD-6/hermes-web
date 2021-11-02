@@ -1,4 +1,4 @@
-import React from 'react';
+import { ComponentProps } from 'react';
 import styled from '@emotion/styled';
 import { colors } from '../../../styles';
 import { VStack } from '../../../components/Layout/StackContainer';
@@ -29,7 +29,7 @@ export type TooltipsProps = {
   minHeight: number;
   backgroundColor: string;
   color: string;
-} & Omit<React.ComponentProps<'div'>, 'css'>;
+} & Omit<ComponentProps<'div'>, 'css'>;
 
 export default function Tooltips({
   position,
@@ -71,8 +71,8 @@ export default function Tooltips({
     color: ${color};
   `;
 
-  let firstGap = '-6px';
-  let secondGap = '15px';
+  const firstGap = '-6px';
+  const secondGap = '15px';
   const [first, second] = position.split('-');
   let firstPosition = '';
   let secondPosition = '';
