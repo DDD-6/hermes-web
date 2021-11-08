@@ -1,8 +1,14 @@
-import MenuBar from './MenuBar';
+import { Story } from '@storybook/react';
+import MenuBar, { MenuBarProps } from './MenuBar';
 
 export default {
   title: 'Navigations / MenuBar',
   components: MenuBar,
 };
 
-export const Base = (args) => <MenuBar {...args} />;
+export const Base: Story<MenuBarProps> = (args) => (
+  <MenuBar
+    profileSrc="https://www.eatlovesavor.com/wp-content/uploads/2016/05/orange-hermes-box.jpg"
+    {...args}
+  />
+);

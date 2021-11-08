@@ -1,4 +1,4 @@
-import React from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import styled from '@emotion/styled';
 import { colors } from '../../../styles/colors';
 import { Icon } from '../../Base/Icon';
@@ -12,6 +12,10 @@ const Component = styled.div`
   width: 64px;
   height: 100vh;
   background-color: ${colors.grey12};
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
 `;
 
 interface ProfileProps {
@@ -33,28 +37,71 @@ const Nav = styled.nav`
 const Button = styled.button`
   &:hover {
     svg {
-      color: ${colors.white};
+      color: ${colors.black};
     }
   }
 `;
 
-const MenuBar = () => {
+export interface MenuBarProps {
+  profileSrc: string;
+}
+
+type MenuType = 'UilEstate' | 'UilBell' | 'UilUser' | 'UilPen';
+
+const MenuBar = (props: MenuBarProps) => {
+  const { profileSrc } = props;
+  const [menu, setMenu] = useState<MenuType>('UilEstate');
+  const onClick = useCallback((iconName: MenuType) => {
+    setMenu(iconName);
+  }, []);
+  useEffect(() => {
+    // 각 메뉴에 따른 API 호출
+    console.log(menu);
+  }, [menu]);
   return (
     <Component>
-      <Profile src="https://www.eatlovesavor.com/wp-content/uploads/2016/05/orange-hermes-box.jpg" />
+      <Profile src={profileSrc} />
       <Nav>
         <VStack gap={20}>
-          <Button className="hermes-menubar-button">
-            <Icon name="UilEstate" color={colors.grey4} display="block" />
+          <Button
+            className="hermes-menubar-button"
+            onClick={() => onClick('UilEstate')}
+          >
+            <Icon
+              name="UilEstate"
+              color={menu === 'UilEstate' ? colors.white : colors.grey6}
+              display="block"
+            />
           </Button>
-          <Button className="hermes-menubar-button">
-            <Icon name="UilBell" color={colors.grey4} display="block" />
+          <Button
+            className="hermes-menubar-button"
+            onClick={() => onClick('UilBell')}
+          >
+            <Icon
+              name="UilBell"
+              color={menu === 'UilBell' ? colors.white : colors.grey6}
+              display="block"
+            />
           </Button>
-          <Button className="hermes-menubar-button">
-            <Icon name="UilUser" color={colors.grey4} display="block" />
+          <Button
+            className="hermes-menubar-button"
+            onClick={() => onClick('UilUser')}
+          >
+            <Icon
+              name="UilUser"
+              color={menu === 'UilUser' ? colors.white : colors.grey6}
+              display="block"
+            />
           </Button>
-          <Button className="hermes-menubar-button write">
-            <Icon name="UilPen" color={colors.grey4} display="block" />
+          <Button
+            className="hermes-menubar-button write"
+            onClick={() => onClick('UilPen')}
+          >
+            <Icon
+              name="UilPen"
+              color={menu === 'UilPen' ? colors.white : colors.grey6}
+              display="block"
+            />
           </Button>
         </VStack>
       </Nav>
