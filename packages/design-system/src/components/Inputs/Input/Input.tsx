@@ -1,4 +1,3 @@
-/* eslint-disable jsx-a11y/label-has-associated-control */
 /** @jsxImportSource @emotion/react */
 import { FocusEvent, forwardRef, InputHTMLAttributes, useState } from 'react';
 import classNames from 'classnames';
