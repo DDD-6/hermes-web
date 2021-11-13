@@ -3,14 +3,14 @@
 import { FocusEvent, forwardRef, InputHTMLAttributes, useState } from 'react';
 import classNames from 'classnames';
 
-import { Caption } from '../Base/Text';
+import { Caption } from '../../Base/Text';
 
 import * as styles from './Input.style';
 
 export interface InputProps
   extends Omit<InputHTMLAttributes<HTMLInputElement>, 'css' | 'value'> {
   label?: string;
-  customValue?: string | number | readonly string[];
+  controlledValue?: string | number | readonly string[];
   errorMessage?: string;
   className?: string;
 }
@@ -26,7 +26,7 @@ const Input = forwardRef<HTMLInputElement, InputProps>(function Input(
     onFocus,
     onBlur,
     label,
-    customValue,
+    controlledValue,
     errorMessage,
     className,
     ...restProps
@@ -71,7 +71,7 @@ const Input = forwardRef<HTMLInputElement, InputProps>(function Input(
         onFocus={handleFocus}
         onBlur={handleBlur}
         {...(isControlled
-          ? { value: customValue, onChange }
+          ? { value: controlledValue, onChange }
           : { defaultValue })}
         {...restProps}
       />
