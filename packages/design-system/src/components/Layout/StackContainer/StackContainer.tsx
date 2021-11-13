@@ -1,7 +1,7 @@
 /** @jsxImportSource @emotion/react */
 import { HTMLAttributes, ReactNode } from 'react';
 import styled from '@emotion/styled';
-import { flexbox, FlexboxProps } from 'styled-system';
+import { flexbox, FlexboxProps, space, SpaceProps } from 'styled-system';
 import classNames from 'classnames';
 
 import {
@@ -11,7 +11,8 @@ import {
 
 export interface StackContainerProps
   extends Omit<HTMLAttributes<HTMLDivElement>, 'css'>,
-    FlexboxProps {
+    FlexboxProps,
+    SpaceProps {
   gap?: ContainerGapType;
   className?: string;
   children: ReactNode;
@@ -26,6 +27,7 @@ export default function StackContainer(props: StackContainerProps) {
     flex-direction: row;
     ${gap && `gap: ${getContainerGapStyle(gap)};`}
     ${flexbox}
+    ${space}
   `;
 
   return (

@@ -83,4 +83,13 @@ export const classStyles = css`
     justify-content: center;
     background: cornflowerblue;
   }
+
+  /** Inputs > Input */
+  .Input-container {
+    width: 480px;
+  }
+
+  .Input-case {
+    width: 100px;
+  }
 `;
