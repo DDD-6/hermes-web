@@ -19,7 +19,6 @@ const Input = forwardRef<HTMLInputElement, InputProps>(function Input(
     id,
     type = 'text',
     defaultValue,
-    placeholder,
     disabled,
     onChange,
     onFocus,
@@ -66,7 +65,6 @@ const Input = forwardRef<HTMLInputElement, InputProps>(function Input(
         id={id}
         ref={ref}
         type={type}
-        placeholder={placeholder}
         onFocus={handleFocus}
         onBlur={handleBlur}
         {...(isControlled

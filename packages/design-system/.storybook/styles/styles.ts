@@ -92,4 +92,13 @@ export const classStyles = css`
   .Input-case {
     width: 100px;
   }
+
+  /** Inputs > Textarea */
+  .Textarea-container {
+    width: 480px;
+  }
+
+  .Textarea-case {
+    width: 100px;
+  }
 `;
