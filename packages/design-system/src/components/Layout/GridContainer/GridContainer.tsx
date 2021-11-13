@@ -1,7 +1,7 @@
 /** @jsxImportSource @emotion/react */
 import { HTMLAttributes, ReactNode } from 'react';
 import styled from '@emotion/styled';
-import { grid, GridProps } from 'styled-system';
+import { grid, GridProps, space, SpaceProps } from 'styled-system';
 import classNames from 'classnames';
 
 import {
@@ -11,7 +11,8 @@ import {
 
 export interface GridContainerProps
   extends Omit<HTMLAttributes<HTMLDivElement>, 'css'>,
-    Omit<GridProps, 'gridGap'> {
+    Omit<GridProps, 'gridGap'>,
+    SpaceProps {
   gap?: ContainerGapType;
   className?: string;
   children: ReactNode;
@@ -24,6 +25,7 @@ export default function GridContainer(props: GridContainerProps) {
     display: grid;
     ${gap && `gap: ${getContainerGapStyle(gap)};`}
     ${grid}
+    ${space}
   `;
 
   return (
