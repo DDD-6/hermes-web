@@ -3,8 +3,8 @@ import { Story, Meta } from '@storybook/react';
 import { ChangeEvent, useEffect, useState } from 'react';
 
 import Input, { InputProps } from './Input';
-import { HStack, VStack } from '../Layout';
-import { Paragraph } from '../Base';
+import { HStack, VStack } from '../../Layout';
+import { Paragraph } from '../../Base';
 
 export default {
   title: 'Inputs / Input',
@@ -96,7 +96,7 @@ export const ControlledInput = ({
   return (
     <Base
       {...args}
-      customValue={inputValue}
+      controlledValue={inputValue}
       onChange={handleChange}
       maxLength={10}
       errorMessage={errorMessage}
