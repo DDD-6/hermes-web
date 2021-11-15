@@ -1,6 +1,6 @@
 /** @jsxImportSource @emotion/react */
 import { Story, Meta } from '@storybook/react';
-import { FormEvent, MouseEvent, useRef } from 'react';
+import { ChangeEvent, FormEvent, MouseEvent, useState } from 'react';
 
 import Textarea, { TextareaProps } from './Textarea';
 import { HStack, VStack } from '../../Layout';
@@ -61,38 +61,44 @@ TextareaStates.argTypes = {
   },
 };
 
-export const WithButton = (args: TextareaProps) => {
-  const textareaRef = useRef<HTMLTextAreaElement>(null);
+export const ControlledWithButton = (args: TextareaProps) => {
+  const [textValue, setTextValue] = useState<string>('');
+  const [isButtonDisabled, setButtonDisabled] = useState<boolean>(true);
 
   const handleCancel = (e: MouseEvent<HTMLButtonElement>) => {
     e.stopPropagation();
 
-    if (textareaRef.current) {
-      textareaRef.current.value = '';
-    }
+    setTextValue('');
   };
 
-  const handleClick = (e: MouseEvent<HTMLButtonElement>) => {
-    e.stopPropagation();
+  const handleChange = (e: ChangeEvent<HTMLTextAreaElement>) => {
+    const { value } = e.target;
+
+    setTextValue(value);
+    setButtonDisabled(value.length < 1);
   };
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     console.log(e);
-    console.log(textareaRef?.current?.value);
+    console.log(textValue);
   };
 
   return (
     <form className="Textarea-container" onSubmit={handleSubmit}>
       <Textarea
         {...args}
-        ref={textareaRef}
-        defaultValue=""
+        controlledValue={textValue}
+        onChange={handleChange}
         buttons={[
-          <button type="button" onClick={handleCancel}>
+          <button
+            type="button"
+            disabled={isButtonDisabled}
+            onClick={handleCancel}
+          >
             Cancel
           </button>,
-          <button type="submit" onClick={handleClick}>
+          <button type="submit" disabled={isButtonDisabled}>
             Submit
           </button>,
         ]}
