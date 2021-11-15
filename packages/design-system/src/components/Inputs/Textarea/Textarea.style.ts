@@ -41,9 +41,3 @@ export const textarea = css`
     color: var(--grey-4);
   }
 `;
-
-export const buttonContainer = css`
-  & > *:not(:last-of-type) {
-    margin-right: 16px;
-  }
-`;
