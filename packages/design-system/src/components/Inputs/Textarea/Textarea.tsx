@@ -65,11 +65,7 @@ const Textarea = forwardRef<HTMLTextAreaElement, TextareaProps>(
           {...restProps}
         />
         {hasButtons && (
-          <HStack
-            css={styles.buttonContainer}
-            justifyContent="flex-end"
-            mt={16}
-          >
+          <HStack justifyContent="flex-end" gap={16} mt={16}>
             {Children.toArray(buttons.map((button) => cloneElement(button)))}
           </HStack>
         )}
