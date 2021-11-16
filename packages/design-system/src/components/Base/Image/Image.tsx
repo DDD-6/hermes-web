@@ -18,7 +18,6 @@ type OmitImgAttributes = 'css' | 'onLoad' | 'onError';
 
 export interface ImageProps
   extends Omit<ImgHTMLAttributes<HTMLImageElement>, OmitImgAttributes> {
-  className?: string;
   onLoadComplete?: (imageElement: HTMLImageElement) => void;
   onLoadError?: () => void;
 }
@@ -28,8 +27,8 @@ export default function Image(props: ImageProps) {
     src = '',
     width = '100%',
     height = 'auto',
-    className = '',
     loading = 'lazy',
+    className,
     onLoadComplete,
     onLoadError,
     ...restProps

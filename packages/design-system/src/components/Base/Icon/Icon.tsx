@@ -17,7 +17,6 @@ export interface IconProps extends Omit<SVGAttributes<SVGSVGElement>, 'css'> {
   name: string;
   size?: number;
   color?: string;
-  className?: string;
 }
 
 export default function Icon(props: IconProps) {
@@ -25,7 +24,7 @@ export default function Icon(props: IconProps) {
     name,
     size = 24,
     color = colors.black,
-    className = '',
+    className,
     ...restProps
   } = props;
 
