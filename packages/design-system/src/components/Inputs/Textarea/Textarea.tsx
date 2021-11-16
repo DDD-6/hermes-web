@@ -19,7 +19,6 @@ export interface TextareaProps
   extends Omit<TextareaHTMLAttributes<HTMLTextAreaElement>, 'css' | 'value'> {
   controlledValue?: string | number | readonly string[];
   buttons?: ReactElement[];
-  className?: string;
 }
 
 const Textarea = forwardRef<HTMLTextAreaElement, TextareaProps>(
@@ -59,6 +58,7 @@ const Textarea = forwardRef<HTMLTextAreaElement, TextareaProps>(
         <textarea
           css={styles.textarea}
           ref={ref}
+          disabled={disabled}
           {...(isControlled
             ? { value: controlledValue, onChange }
             : { defaultValue })}

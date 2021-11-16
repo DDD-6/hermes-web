@@ -11,7 +11,6 @@ export interface InputProps
   label?: string;
   controlledValue?: string | number | readonly string[];
   errorMessage?: string;
-  className?: string;
 }
 
 const Input = forwardRef<HTMLInputElement, InputProps>(function Input(
@@ -65,6 +64,7 @@ const Input = forwardRef<HTMLInputElement, InputProps>(function Input(
         id={id}
         ref={ref}
         type={type}
+        disabled={disabled}
         onFocus={handleFocus}
         onBlur={handleBlur}
         {...(isControlled
