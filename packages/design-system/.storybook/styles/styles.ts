@@ -84,21 +84,20 @@ export const classStyles = css`
     background: cornflowerblue;
   }
 
-  /** Inputs > Input */
-  .Input-container {
+  /** Inputs */
+  .Inputs-container {
     width: 480px;
   }
 
-  .Input-case {
+  .Inputs-case {
     width: 100px;
   }
 
-  /** Inputs > Textarea */
-  .Textarea-container {
-    width: 480px;
-  }
+  .Inputs-subcase {
+    width: calc(100% - 100px) !important;
 
-  .Textarea-case {
-    width: 100px;
+    & > * {
+      width: 200px;
+    }
   }
 `;

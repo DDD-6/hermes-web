@@ -16,7 +16,7 @@ export default {
 
 const TextareaBase: Story<TextareaProps> = (args) => {
   return (
-    <div className="Textarea-container">
+    <div className="Inputs-container">
       <Textarea {...args} />
     </div>
   );
@@ -28,25 +28,25 @@ export const TextareaStates = (args: TextareaProps) => {
   return (
     <VStack>
       <HStack alignItems="center" mb={20}>
-        <Paragraph type="3" className="Textarea-case">
+        <Paragraph type="3" className="Inputs-case">
           initial
         </Paragraph>
         <Base {...args} />
       </HStack>
       <HStack alignItems="center" mb={20}>
-        <Paragraph type="3" className="Textarea-case">
+        <Paragraph type="3" className="Inputs-case">
           focused
         </Paragraph>
         <Base {...args} defaultValue="내용 입력 중" autoFocus />
       </HStack>
       <HStack alignItems="center" mb={20}>
-        <Paragraph type="3" className="Textarea-case">
+        <Paragraph type="3" className="Inputs-case">
           blurred
         </Paragraph>
         <Base {...args} defaultValue="내용 입력" />
       </HStack>
       <HStack alignItems="center" mb={20}>
-        <Paragraph type="3" className="Textarea-case">
+        <Paragraph type="3" className="Inputs-case">
           disabled
         </Paragraph>
         <Base {...args} defaultValue="내용 입력" disabled />
@@ -85,7 +85,7 @@ export const ControlledWithButton = (args: TextareaProps) => {
   };
 
   return (
-    <form className="Textarea-container" onSubmit={handleSubmit}>
+    <form className="Inputs-container" onSubmit={handleSubmit}>
       <Textarea
         {...args}
         controlledValue={textValue}

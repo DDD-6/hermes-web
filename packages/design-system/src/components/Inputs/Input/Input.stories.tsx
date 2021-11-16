@@ -20,7 +20,7 @@ const InputBase: Story<InputProps> = (args) => {
   const { errorMessage, ...restArgs } = args;
 
   return (
-    <div className="Input-container">
+    <div className="Inputs-container">
       <Input {...restArgs} errorMessage={errorMessage} />
     </div>
   );
@@ -32,25 +32,25 @@ export const InputStates = (args: InputProps) => {
   return (
     <VStack>
       <HStack alignItems="center" mb={20}>
-        <Paragraph type="3" className="Input-case">
+        <Paragraph type="3" className="Inputs-case">
           initial
         </Paragraph>
         <Base {...args} />
       </HStack>
       <HStack alignItems="center" mb={20}>
-        <Paragraph type="3" className="Input-case">
+        <Paragraph type="3" className="Inputs-case">
           focused
         </Paragraph>
         <Base {...args} defaultValue="내용 입력 중" autoFocus />
       </HStack>
       <HStack alignItems="center" mb={20}>
-        <Paragraph type="3" className="Input-case">
+        <Paragraph type="3" className="Inputs-case">
           blurred
         </Paragraph>
         <Base {...args} defaultValue="내용 입력" />
       </HStack>
       <HStack alignItems="center" mb={20}>
-        <Paragraph type="3" className="Input-case">
+        <Paragraph type="3" className="Inputs-case">
           disabled
         </Paragraph>
         <Base {...args} defaultValue="내용 입력" disabled />

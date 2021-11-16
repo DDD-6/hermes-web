@@ -14,12 +14,11 @@ export interface StackContainerProps
     FlexboxProps,
     SpaceProps {
   gap?: ContainerGapType;
-  className?: string;
   children: ReactNode;
 }
 
 export default function StackContainer(props: StackContainerProps) {
-  const { gap, className = '', children, ...restProps } = props;
+  const { gap, className, children, ...restProps } = props;
 
   const Container = styled.div`
     width: 100%;
