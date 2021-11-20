@@ -44,7 +44,7 @@ export const label = css`
   font-size: 16px;
   font-weight: 400;
   line-height: 28px;
-  letter-spacing: -0.6;
+  letter-spacing: -0.6px;
   margin-left: 8px;
 `;
 

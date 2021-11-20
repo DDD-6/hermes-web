@@ -56,6 +56,7 @@ const Textarea = forwardRef<HTMLTextAreaElement, TextareaProps>(
         ]}
       >
         <textarea
+          className="hermes-textarea"
           css={styles.textarea}
           ref={ref}
           disabled={disabled}
@@ -65,7 +66,12 @@ const Textarea = forwardRef<HTMLTextAreaElement, TextareaProps>(
           {...restProps}
         />
         {hasButtons && (
-          <HStack justifyContent="flex-end" gap={16} mt={16}>
+          <HStack
+            className="hermes-textarea-buttons"
+            justifyContent="flex-end"
+            gap={16}
+            mt={16}
+          >
             {Children.toArray(buttons.map((button) => cloneElement(button)))}
           </HStack>
         )}

@@ -52,6 +52,7 @@ const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(function Checkbox(
           checked && styles.checked,
           disabled && styles.disabled(checked),
         ]}
+        className="hermes-checkbox"
       >
         <UilCheck css={styles.icon} size={18} color={colors.white} />
         <input
@@ -67,6 +68,7 @@ const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(function Checkbox(
       </div>
       {Boolean(label) && (
         <label
+          className="hermes-checkbox-label"
           css={[styles.label, disabled && styles.disabledLabel]}
           htmlFor={id}
         >
