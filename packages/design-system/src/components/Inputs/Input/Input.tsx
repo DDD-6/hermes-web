@@ -51,11 +51,12 @@ const Input = forwardRef<HTMLInputElement, InputProps>(function Input(
       css={styles.container}
     >
       {label && (
-        <label css={styles.label} htmlFor={id}>
+        <label className="hermes-input-label" css={styles.label} htmlFor={id}>
           {label}
         </label>
       )}
       <input
+        className="hermes-input"
         css={[
           styles.input,
           isFocused && styles.focused,
@@ -72,7 +73,11 @@ const Input = forwardRef<HTMLInputElement, InputProps>(function Input(
           : { defaultValue })}
         {...restProps}
       />
-      <Caption css={styles.errorMessage} type="2">
+      <Caption
+        className="hermes-input-caption"
+        css={styles.errorMessage}
+        type="2"
+      >
         {errorMessage}
       </Caption>
     </div>

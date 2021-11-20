@@ -35,7 +35,10 @@ const Toggle = forwardRef<HTMLInputElement, ToggleProps>(function Toggle(
       css={styles.container}
       className={classNames('hermes-toggle-container', className)}
     >
-      <div css={[styles.toggle, checked && styles.checked]}>
+      <div
+        className="hermes-toggle"
+        css={[styles.toggle, checked && styles.checked]}
+      >
         <div css={styles.indicator} />
         <input
           css={styles.input}
@@ -48,7 +51,7 @@ const Toggle = forwardRef<HTMLInputElement, ToggleProps>(function Toggle(
         />
       </div>
       {Boolean(label) && (
-        <label css={styles.label} htmlFor={id}>
+        <label className="hermes-toggle-label" css={styles.label} htmlFor={id}>
           {label}
         </label>
       )}
