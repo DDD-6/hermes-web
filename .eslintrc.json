@@ -45,6 +45,22 @@
     "import/no-anonymous-default-export": "off",
     "import/no-extraneous-dependencies": "off",
     "import/prefer-default-export": "off",
+    "import/order": [
+      "warn",
+      {
+        "newlines-between": "always",
+        "alphabetize": { "order": "asc" },
+        "groups": ["builtin", "external", "parent", "sibling", "index"],
+        "pathGroups": [
+          {
+            "pattern": "@hermes/**",
+            "group": "parent",
+            "position": "after"
+          }
+        ],
+        "pathGroupsExcludedImportTypes": ["parent"]
+      }
+    ],
     "jsx-a11y/click-events-have-key-events": "off",
     "jsx-a11y/alt-text": "off",
     "jsx-a11y/no-static-element-interactions": "off"
