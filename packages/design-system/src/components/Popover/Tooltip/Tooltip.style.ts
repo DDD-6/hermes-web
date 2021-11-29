@@ -1,9 +1,12 @@
 import { css } from '@emotion/react';
 
+import { titleStyleMap } from '../../Base/Text/fontMaps';
+
 export const tooltipWrapper = css`
   position: relative;
   width: 272px;
-  height: 56px;
+  min-height: 56px;
+  word-break: break-all;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -62,12 +65,12 @@ export const tailPosition = {
   `,
   left: css`
     left: -18.4px;
-    top: 22px;
+    top: calc(50% - 8.17px / 2);
     transform: rotate(270deg);
   `,
   'left-bottom': css`
     left: -18.4px;
-    top: 28px;
+    bottom: 16px;
     transform: rotate(270deg);
   `,
 
@@ -79,12 +82,18 @@ export const tailPosition = {
   `,
   right: css`
     right: -18.4px;
-    top: 22px;
+    top: calc(50% - 8.17px / 2);
     transform: rotate(90deg);
   `,
   'right-bottom': css`
     right: -18.4px;
-    top: 28px;
+    bottom: 16px;
     transform: rotate(90deg);
   `,
 };
+
+export const button = css`
+  min-height: 40px;
+  color: var(--white);
+  ${titleStyleMap['9']};
+`;

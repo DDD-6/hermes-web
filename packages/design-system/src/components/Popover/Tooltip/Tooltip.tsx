@@ -2,9 +2,8 @@
 import classNames from 'classnames';
 import { forwardRef, ReactNode } from 'react';
 
+import { tooltipTail } from '../../../../src/assets/img';
 import { Paragraph } from '../../Base/Text';
-
-import { tooltipTail } from '@hermes/design-system/src/assets/img';
 
 import * as styles from './Tooltip.style';
 
@@ -30,6 +29,7 @@ type TailPosition =
 
 export interface TooltipProps {
   show?: boolean;
+  tipText: string;
   tailPosition: TailPosition;
   className?: string;
   children?: ReactNode;
@@ -39,7 +39,13 @@ const Tooltip = forwardRef<HTMLDivElement, TooltipProps>(function Tooltip(
   props: TooltipProps,
   ref,
 ) {
-  const { show = false, tailPosition, className = '', children } = props;
+  const {
+    show = false,
+    tipText,
+    tailPosition,
+    className = '',
+    children,
+  } = props;
 
   return show ? (
     <div
@@ -57,8 +63,9 @@ const Tooltip = forwardRef<HTMLDivElement, TooltipProps>(function Tooltip(
         css={[styles.tail, styles.tailPosition[tailPosition]]}
       />
       <Paragraph type="1" css={styles.text}>
-        {children}
+        {tipText}
       </Paragraph>
+      {children}
     </div>
   ) : null;
 });
